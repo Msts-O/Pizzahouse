@@ -16,12 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzas', function () {
-    $pizza =[
-        'type' => 'hawaiian',
-        'base' => 'cheesy crust',
-        'price'=> 10
+    $pizzas = [
+       ['type' => 'hawaiian', 'base' => 'cheesy crust' ],
+       ['type' => 'volcano' , 'base' => 'garlic crust' ],
+    ];
 
-        ];
-    return view('pizzas',$pizza);
+    return view('pizzas',['pizzas' =>$pizzas]);
 });
 
