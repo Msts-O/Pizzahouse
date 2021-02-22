@@ -21,6 +21,13 @@ Route::get('/pizzas', function () {
        ['type' => 'volcano' , 'base' => 'garlic crust' ],
     ];
 
-    return view('pizzas',['pizzas' =>$pizzas]);
+    $name= request('name');
+    $age = request('age');
+
+    return view('pizzas',[
+        'pizzas' =>$pizzas,
+        'name'   =>$name,
+        'age'    =>$age
+    ]);
 });
 
