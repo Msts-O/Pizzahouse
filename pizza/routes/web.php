@@ -17,17 +17,17 @@ Route::get('/', function () {
 
 Route::get('/pizzas', function () {
     $pizzas = [
-       ['type' => 'hawaiian', 'base' => 'cheesy crust' ],
-       ['type' => 'volcano' , 'base' => 'garlic crust' ],
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'garlic crust'],
     ];
 
-    $name= request('name');
-    $age = request('age');
 
-    return view('pizzas',[
-        'pizzas' =>$pizzas,
-        'name'   =>$name,
-        'age'    =>$age
+    return view('pizzas', [
+        'pizzas' => $pizzas
     ]);
+});
+
+    Route::get ('/pizzas/{id}',function ($id) {
+        return view ('details',['id'=> $id]);
 });
 
