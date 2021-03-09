@@ -21,7 +21,8 @@
                 <div class="title m-b-md">
                     Matthew Pizza
                 </div>
-
+                <p class="mssg">{{session('mssg')}}</p>
+                <a href="/pizzas/create">Order a Pizza</a>
                 <div class="links">
                 </div>
             </div>
