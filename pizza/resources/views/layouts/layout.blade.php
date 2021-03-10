@@ -10,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 
 </head>
    <body>
+
      @yield('content')
+
    <footer>
      Copyright 2021 Pizza House
    </footer>
