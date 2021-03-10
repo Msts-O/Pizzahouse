@@ -39,4 +39,11 @@ class PizzaController extends Controller
 
         return redirect('/')->with('mssg','Thanks for ordering a Pizza!');
     }
+
+    public function destroy($id)  {
+        $pizza = Pizza::find($id);
+        $pizza->delete();
+
+        return redirect('/pizzas');
+    }
 }
